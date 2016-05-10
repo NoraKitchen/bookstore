@@ -1,0 +1,1 @@
+angular.module("bookstore-app", ["firebase"])

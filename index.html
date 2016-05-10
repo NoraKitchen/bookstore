@@ -1,0 +1,32 @@
+<html ng-app="bookstore-app">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookstore</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    
+    <div class="container">
+        <section class="row">
+            <div class="col-md-12">
+                <bookstore-form></bookstore-form>
+            </div>
+        </section>
+        
+        
+        <section class="row">
+            <div class="col-md-12">
+                <bookstore-library></bookstore-library>
+            </div>
+        </section>
+    </div>
+    
+    
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="app/init.js"></script>
+    <script src="app/components/bookstore-form/bookstore-form.js"></script>
+    <script src="app/components/bookstore-library/bookstore-library.js"></script>
+</body>
+</html>
