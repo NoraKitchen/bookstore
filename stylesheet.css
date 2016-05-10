@@ -1,0 +1,12 @@
+.library {
+    display: flex;
+    justify-content: center;
+    border: 1px solid lightslategray
+}
+
+.book-panel {
+    width: 250px !important;
+    text-align: center;
+    margin: 40px;
+    padding: 20px;
+}

@@ -1,9 +1,14 @@
 angular.module("bookstore-app")
     .component("bookstoreLibrary", {
         templateUrl: "app/components/bookstore-library/bookstore-library.html",
-        controller: function(){
+        controller: function($firebaseArray){
             
-            var fc = this;
-            fc.test = "Hi from library controller"
+            var lc = this;
+            var db = new Firebase("https://scratchpad-bcw.firebaseio.com/bookstore")
+            lc.bookList = $firebaseArray(db);
+            
+            lc.removeBook = function(book){
+                lc.bookList.$remove(book);
+            }
         }
     })

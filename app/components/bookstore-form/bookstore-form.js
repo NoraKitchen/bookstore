@@ -1,9 +1,17 @@
 angular.module("bookstore-app")
     .component("bookstoreForm", {
         templateUrl: "app/components/bookstore-form/bookstore-form.html",
-        controller: function(){
+        controller: function($firebaseArray){
             
             var fc = this;
-            fc.test = "Hi from form controller"
+            var db = new Firebase("https://scratchpad-bcw.firebaseio.com/bookstore")
+            fc.bookList = $firebaseArray(db);
+            
+            
+            fc.addBook = function(book){
+                fc.bookList.$add(book);
+                fc.newBook = "";
+            }
+
         }
     })

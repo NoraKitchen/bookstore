@@ -1,1 +1,10 @@
-{{$ctrl.test}}
+<div class="col-md-1"></div>
+<div class="library col-md-10">
+    <div class="panel panel-default book-panel" ng-repeat="book in $ctrl.bookList">
+        <img ng-src="{{book.image}}" class="img-thumbnail">
+        <h4>{{book.title}}</h4> 
+        <p>{{book.author}}</p>
+        <a href="#" ng-click="$ctrl.removeBook(book)" class="pull-right">X</a>
+    </div>
+</div>
+<div class="col-md-1"></div>
